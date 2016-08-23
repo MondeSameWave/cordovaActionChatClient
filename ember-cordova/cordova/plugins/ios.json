@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "cordovaActionChatClient"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "cordovaActionChatClient"
+        }
+    },
+    "dependent_plugins": {}
+}

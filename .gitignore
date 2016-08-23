@@ -3,6 +3,9 @@
 # compiled output
 /dist
 /tmp
+/ember-cordova/tmp-livereload
+/ember-cordova/cordova/platforms
+/ember-cordova/cordova/www/assets
 
 # dependencies
 /node_modules

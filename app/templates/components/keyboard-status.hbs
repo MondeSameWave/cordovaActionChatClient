@@ -1,0 +1,18 @@
+<h3>{{keyboardIsShowing}}</h3>
+
+<h4>The current status of the keyboard is <strong>{{keyboardIsShowingMonitor}}</strong></h4>
+
+{{#if keyboardIsShowing}}
+  Keyboard is showing
+{{/if}}
+
+{{input value=currentValue}}
+
+{{currentValue}}
+
+
+<button {{action (action "setKeyboardStatusToTrue")}}>Turn on</button>
+
+<button {{action (action "setKeyboardStatusToFalse")}}>Turn off</button>
+
+<button>random</button>
