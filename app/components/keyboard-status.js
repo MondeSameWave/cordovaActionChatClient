@@ -11,18 +11,17 @@ const {
 export default Component.extend({
   keyboard: inject.service('cordova/keyboard'),
   keyboardIsShowing: false,
-  dummy: true,
-
 
   didInsertElement() {
     this._super();
-    console.log(`keyboard object: ${this.get('keyboard')}`);
 
+    var _this = this;
     this.get('keyboard').on('keyboardDidShow', this.keyboardDidShow);
     this.get('keyboard').on('keyboardDidHide', this.keyboardDidHide);
   },
 
   willDestroyElement() {
+  	var _this = this;
     this.get('keyboard').off('keyboardDidShow', this.keyboardDidShow);
     this.get('keyboard').off('keyboardDidHide', this.keyboardDidHide);
 
@@ -38,12 +37,6 @@ export default Component.extend({
     this.set('keyboardIsShowing', false);
     console.log(`keyboardDidHide triggered: ${this.get('keyboardIsShowing')}`);
   },
-
-  // log: computed('keyboardDidShow', function() {
-  // 	this.toggleProperty('keyboardIsShowing');
-  // 	console.log(`bra`);
-  // }),
-
   actions: {
   	setKeyboardStatusToTrue() {
   		this.set('keyboardIsShowing', true);
